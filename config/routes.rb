@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :post_images, only: [:new, :index, :show]
   get 'homes/about' => 'homes#about', as: 'about'
   resources :users, only: [:new, :create] , path_names: { new: 'sign_up' }
 
